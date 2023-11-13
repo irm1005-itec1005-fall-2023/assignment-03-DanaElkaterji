@@ -51,14 +51,15 @@
 // the function does not need to return anything
 // Initialize an empty todoList array
 let todoItems = [];
+let count=0;
 
 function addToDoItem(text) {
   let todoItem = {
-    id: todoItems.length,
+    id: count,
     text: text,
     completed: false
   };
-
+ count= count +1;
   todoItems.push(todoItem);
   console.log("Added:", todoItem);
 }
@@ -91,7 +92,12 @@ function markToDoItemAsCompleted(todoID) {
 // that matches the id passed to the function, remove it from the array
 // the function does not need to return anything, though you can return
 // true or false depending on whether the item was successfully deleted
-
+function removeToDoItem(todoId){
+  if (typeof todoId !== "number") {
+    console.log("Please enter a number");
+    return false;
+  }
+}
 // Function to delete a task from the array
 
 function deleteToDoItem(todoId) {
