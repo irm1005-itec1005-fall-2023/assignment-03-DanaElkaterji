@@ -97,10 +97,11 @@ function removeToDoItem(todoId){
   if (typeof todoId !== "number") {
     console.log("Please enter a number");
 
-    deleteToDoItem(todoId);
+    
 
     return false;
   }
+  deleteToDoItem(todoId);
 }
 // Function to delete a task from the array
 
