@@ -92,9 +92,13 @@ function markToDoItemAsCompleted(todoID) {
 // that matches the id passed to the function, remove it from the array
 // the function does not need to return anything, though you can return
 // true or false depending on whether the item was successfully deleted
+
 function removeToDoItem(todoId){
   if (typeof todoId !== "number") {
     console.log("Please enter a number");
+
+    deleteToDoItem(todoId);
+
     return false;
   }
 }
